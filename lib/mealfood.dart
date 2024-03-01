@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/breakfast.dart';
 import 'package:flutter_application_1/button.dart';
 //import 'package:flutter_application_1/button.dart';
 
@@ -17,18 +18,21 @@ class _mealfoodState extends State<mealfood> {
       "Image": "images/Healthy-Breakfast-1000x620.jpg",
       "title" : "Meal plan",
       "subtitle":"",
+      "tag" : "1"
      },
       {
       "name": "Snack",
       "Image": "images/variety-of-healthy-snacks-gourmet-dips-royalty-free-image-1639694989.jpg",
       "title" : "Meal plan",
       "subtitle":"",
+      "tag" : "2"
      },
       {
       "name": "Dinner",
       "Image": "images/healthy-tuna-pasta-bake-p46-151271-2.jpg",
       "title" : "Meal plan",
       "subtitle":"",
+      "tag" : "3"
      },
   ];
   @override
@@ -102,7 +106,16 @@ class _mealfoodState extends State<mealfood> {
                 height: 25,
                 child: RoundButton(title:"See more",
                 fontSize: 14,
-                fontWeight: FontWeight.w500, onPressed: () {  },),
+                fontWeight: FontWeight.w500, onPressed: () { 
+                  switch(W0bg["tag"].toString()=="1"){
+                    case "1":
+                    Navigator.of(context).push(
+                       MaterialPageRoute(builder: (context)=>breakfast()));
+                    break;
+                    default:
+                  }
+
+                 },),
               ),
             ],
           )
@@ -112,6 +125,7 @@ class _mealfoodState extends State<mealfood> {
               ],
             ) ,
           );
+          
         })
     );
   }
