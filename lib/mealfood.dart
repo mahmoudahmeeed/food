@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/breakfast.dart';
 import 'package:flutter_application_1/button.dart';
-//import 'package:flutter_application_1/button.dart';
+import 'package:flutter_application_1/dinner.dart';
+import 'package:flutter_application_1/snacks.dart';
+
 
 class mealfood extends StatefulWidget {
   const mealfood({super.key});
@@ -49,7 +51,7 @@ class _mealfoodState extends State<mealfood> {
         padding: const EdgeInsets.symmetric(vertical: 15,horizontal:20 ),
         itemCount: meal.length,
         itemBuilder: (context,index){
-          var W0bg=meal[index] as Map? ??{};
+          var W0bg=meal[index] ;
           return Container(
             margin: const EdgeInsets.symmetric(vertical: 10),
             decoration: BoxDecoration(
@@ -107,12 +109,20 @@ class _mealfoodState extends State<mealfood> {
                 child: RoundButton(title:"See more",
                 fontSize: 14,
                 fontWeight: FontWeight.w500, onPressed: () { 
-                  switch(W0bg["tag"].toString()=="1"){
+                  print(W0bg["tag"]);
+                  switch(W0bg["tag"]="1"){
                     case "1":
                     Navigator.of(context).push(
                        MaterialPageRoute(builder: (context)=>breakfast()));
                     break;
+                    case "2":
+                    Navigator.of(context).push(
+                       MaterialPageRoute(builder: (context)=>Snaks()));
+                    break;
                     default:
+                    Navigator.of(context).push(
+                       MaterialPageRoute(builder: (context)=>Dinner()));
+                       break;
                   }
 
                  },),

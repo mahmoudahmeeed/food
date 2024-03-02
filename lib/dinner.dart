@@ -1,30 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 
-class breakfast extends StatefulWidget {
-  const breakfast({super.key});
+class Dinner extends StatefulWidget {
+  const Dinner({super.key});
 
   @override
-  State<breakfast> createState() => _breakfastState();
+  State<Dinner> createState() => _DinnerState();
 }
 
-class _breakfastState extends State<breakfast> {
+class _DinnerState extends State<Dinner> {
   @override
   Widget build(BuildContext context) {
-    DateTime today= DateTime.now();
-    void onDaySelected(DateTime day,DateTime focusedDay){
+     DateTime today=DateTime.now();
+     void _onDaySelected2(DateTime day,DateTime focusedDay){
       setState(() {
         today=day;
       });
     }
     return  Scaffold(
-      body: Container(
+       body: Container(
         child:TableCalendar(
-          locale:'en_us',
+          locale: 
+          'en_us',
           rowHeight:35,
-           headerStyle:HeaderStyle(formatButtonVisible: false,titleCentered: true),
+          headerStyle:HeaderStyle(formatButtonVisible: false,titleCentered: true),
           focusedDay: today,
-          onDaySelected: onDaySelected,
+          onDaySelected: _onDaySelected2,
           availableGestures: AvailableGestures.all,
           selectedDayPredicate: (day) => isSameDay(day, today),
          firstDay: DateTime.utc(2022,01,01),
