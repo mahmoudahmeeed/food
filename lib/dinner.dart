@@ -18,19 +18,29 @@ class _DinnerState extends State<Dinner> {
       });
     }
     return  Scaffold(
-       body: Container(
-        child:TableCalendar(
-          locale: 
-          'en_us',
-          rowHeight:35,
-          headerStyle:HeaderStyle(formatButtonVisible: false,titleCentered: true),
-          focusedDay: today,
-          onDaySelected: _onDaySelected2,
-          availableGestures: AvailableGestures.all,
-          selectedDayPredicate: (day) => isSameDay(day, today),
-         firstDay: DateTime.utc(2022,01,01),
-          lastDay: DateTime.utc(2040,01,01)) ,
-      ),
+       body: Column(
+         children: [
+           Container(
+            child:TableCalendar(
+              locale: 
+              'en_us',
+              rowHeight:35,
+              headerStyle:HeaderStyle(formatButtonVisible: false,titleCentered: true),
+              focusedDay: today,
+              onDaySelected: _onDaySelected2,
+              availableGestures: AvailableGestures.all,
+              selectedDayPredicate: (day) => isSameDay(day, today),
+             firstDay: DateTime.utc(2022,01,01),
+              lastDay: DateTime.utc(2040,01,01),
+              ) ,
+              
+                 ),
+                 
+
+                 
+         ],
+       ),
+      
     );
   }
 }
