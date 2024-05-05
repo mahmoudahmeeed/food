@@ -5,34 +5,48 @@ import 'package:flutter_application_1/dinner.dart';
 import 'package:flutter_application_1/snacks.dart';
 
 
-class mealfood extends StatefulWidget {
-  const mealfood({super.key});
+class Workplan extends StatefulWidget {
+  const Workplan({super.key});
 
   @override
-  State<mealfood> createState() => _mealfoodState();
+  State<Workplan> createState() => _mealfoodState();
 }
 
-class _mealfoodState extends State<mealfood> {
+class _mealfoodState extends State<Workplan> {
   int isActiveTap=0;
   List meal=[
      {
-      "name": "Breakfast",
-      "Image": "images/Healthy-Breakfast-1000x620.jpg",
-      "title" : "Meal plan",
+      "name": "Leg",
+      "Image": "images/205-125630-benefits-leg-exercises_700x400.jpg",
+      "title" : "Work plan",
       "subtitle":"",
       "tag" : "1"
      },
       {
-      "name": "Snack",
-      "Image": "images/variety-of-healthy-snacks-gourmet-dips-royalty-free-image-1639694989.jpg",
-      "title" : "Meal plan",
+      "name": "Abdominal",
+      "Image": "images/تمارين-شد-البطن-بالصور_slideshow_1947_31445e591d7-1ab0-4f79-8bba-71e0b936b581.jpg",
+      "title" : "Work plan",
       "subtitle":"",
       "tag" : "2"
      },
       {
-      "name": "Dinner",
-      "Image": "images/healthy-tuna-pasta-bake-p46-151271-2.jpg",
-      "title" : "Meal plan",
+      "name": "Back exercises",
+      "Image": "images/images.jpeg",
+      "title" : "Work plan",
+      "subtitle":"",
+      "tag" : "3"
+     },
+     {
+      "name": "Shoulder",
+      "Image": "images/images3.jpeg",
+      "title" : "Work plan",
+      "subtitle":"",
+      "tag" : "3"
+     },
+      {
+      "name": "Chest",
+      "Image": "images/images.2jpeg.webp",
+      "title" : "Work plan",
       "subtitle":"",
       "tag" : "3"
      },
@@ -43,7 +57,7 @@ class _mealfoodState extends State<mealfood> {
     return  Scaffold(
       appBar: AppBar(centerTitle: true,
       backgroundColor: Colors.white,
-        title: const Text("Meal plan",
+        title: const Text("Work plan",
         style: TextStyle(color: Colors.black,
         fontSize: 20,fontWeight: FontWeight.w700,),),
       ),
